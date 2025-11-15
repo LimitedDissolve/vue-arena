@@ -1,0 +1,46 @@
+{
+  "name": "vue-arena",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "--------------------------------<      DEV       >--------------------------------": "",
+    "dev": "vite --config vite.config.ts",
+    "--------------------------------<      BUILD     >--------------------------------": "",
+    "build": "vite build --config vite.config.ts",
+    "preview": "vite preview --config vite.config.ts",
+    "--------------------------------< LINT & FORMAT >---------------------------------": "",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "vue-tsc --noEmit",
+    "--------------------------------<     HELPERS   >---------------------------------": "",
+    "postinstall": "simple-git-hooks"
+  },
+  "dependencies": {
+    "pinia": "^3.0.4",
+    "vue": "^3.5.24",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "6.2.0",
+    "@tsconfig/node24": "^24.0.2",
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "eslint": "9.39.1",
+    "eslint-plugin-format": "1.0.2",
+    "jiti": "^2.6.1",
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "~5.9.3",
+    "vite": "npm:rolldown-vite@latest",
+    "vite-plugin-vue-devtools": "^8.0.3",
+    "vue-tsc": "^3.1.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run lint && npm run typecheck",
+    "post-commit": "git status"
+  }
+}

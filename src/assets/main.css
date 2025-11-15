@@ -1,0 +1,27 @@
+@import './base.css';
+@import './fonts.css';
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+h1 {
+  color: #29242a;
+  font-weight: 600;
+}
+
+p {
+  color: #706b6e;
+}
+
+a {
+  color: #e16032;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #f37a51;
+  text-decoration: underline;
+}
